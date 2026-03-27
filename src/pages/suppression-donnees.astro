@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Suppression des données — LifeHub" description="Demandez la suppression de vos données personnelles de LifeHub. Instructions et formulaire de demande.">
+  <!-- Navbar simple -->
+  <nav class="fixed top-0 left-0 right-0 z-50 navbar-glass">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/logo-with-text-dark.svg" alt="LifeHub" class="h-8" />
+        </a>
+        <a href="/" class="text-sm text-slate-400 hover:text-slate-50 transition-colors">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-24">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-slate-50 mb-2">Suppression des données utilisateur</h1>
+      <p class="text-sm text-slate-500 mb-12">Conformément au RGPD — Droit à l'effacement (Article 17)</p>
+
+      <div class="space-y-10 text-slate-300 leading-relaxed">
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">Votre droit à la suppression</h2>
+          <p>
+            Vous avez le droit de demander la suppression de l'ensemble de vos données personnelles
+            stockées par LifeHub. Cette suppression est définitive et irréversible.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">Quelles données sont supprimées ?</h2>
+          <p class="mb-3">La suppression concerne l'intégralité de vos données, notamment :</p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+            <li>Votre profil et informations de compte</li>
+            <li>Vos données de la liste d'attente (email)</li>
+            <li>Vos données synchronisées (emails, calendrier, santé, finances)</li>
+            <li>Vos tâches, habitudes, journal et objectifs</li>
+            <li>Vos conversations avec l'assistant IA</li>
+            <li>Vos tokens de connexion aux services tiers</li>
+            <li>Vos préférences et paramètres</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">Comment demander la suppression</h2>
+
+          <div class="space-y-6">
+            <!-- Option 1 -->
+            <div class="bg-surface-800 border border-slate-700 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-violet/10 text-brand-violet text-sm font-bold">1</div>
+                <h3 class="text-lg font-semibold text-slate-50">Depuis l'application</h3>
+              </div>
+              <p class="text-slate-400">
+                Si vous avez un compte LifeHub, rendez-vous dans
+                <strong class="text-slate-300">Paramètres → Compte → Supprimer mon compte</strong>.
+                La suppression est immédiate et automatique.
+              </p>
+            </div>
+
+            <!-- Option 2 -->
+            <div class="bg-surface-800 border border-slate-700 rounded-2xl p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-violet/10 text-brand-violet text-sm font-bold">2</div>
+                <h3 class="text-lg font-semibold text-slate-50">Par email</h3>
+              </div>
+              <p class="text-slate-400 mb-3">
+                Envoyez un email à
+                <a href="mailto:contact@lifehub.dev?subject=Demande%20de%20suppression%20de%20données" class="text-brand-violet hover:underline">contact@lifehub.dev</a>
+                avec pour objet <strong class="text-slate-300">"Demande de suppression de données"</strong>.
+              </p>
+              <p class="text-slate-400">Merci d'inclure dans votre email :</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400 mt-2">
+                <li>L'adresse email associée à votre compte</li>
+                <li>La confirmation que vous souhaitez supprimer toutes vos données</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">Délai de traitement</h2>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+            <li><strong class="text-slate-300">Depuis l'application :</strong> suppression immédiate</li>
+            <li><strong class="text-slate-300">Par email :</strong> traitement sous 48 heures maximum</li>
+          </ul>
+          <p class="mt-3">
+            Vous recevrez un email de confirmation une fois la suppression effectuée.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">Services tiers</h2>
+          <p>
+            La suppression de vos données LifeHub révoque automatiquement les accès aux services connectés
+            (mail, calendrier, santé, etc.). Vos données sur ces services tiers ne sont pas affectées —
+            LifeHub n'en conserve aucune copie après suppression.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">Contact</h2>
+          <p>
+            Pour toute question concernant la suppression de vos données, contactez-nous à
+            <a href="mailto:contact@lifehub.dev" class="text-brand-violet hover:underline">contact@lifehub.dev</a>.
+          </p>
+          <p class="mt-3">
+            Consultez également notre <a href="/politique-confidentialite" class="text-brand-violet hover:underline">politique de confidentialité</a>
+            pour plus d'informations sur le traitement de vos données.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</Layout>

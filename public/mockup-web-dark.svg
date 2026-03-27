@@ -41,7 +41,7 @@
   <rect x="0" y="0" width="240" height="800" fill="#1e293b"/>
   <rect x="239" y="0" width="1" height="800" fill="#2d3f57"/>
 
-  <!-- ── Logo empilé : onde AU-DESSUS de LifeFlow ── -->
+  <!-- ── Logo empilé : onde AU-DESSUS de LifeHub ── -->
   <!-- Onde Pulse centrée dans sidebar (240px → centre x=120) -->
   <g transform="translate(70, 18) scale(0.5)">
     <path d="M 28 100 C 38 100, 42 82, 52 82 C 62 82, 66 118, 76 118
@@ -49,9 +49,9 @@
              C 138 132, 140 50, 154 50 C 164 50, 166 150, 172 150"
           fill="none" stroke="url(#pulse)" stroke-width="11" stroke-linecap="round"/>
   </g>
-  <!-- "LifeFlow" centré sous l'onde -->
+  <!-- "LifeHub" centré sous l'onde -->
   <text text-anchor="middle" x="120" y="94" font-size="15" letter-spacing="-0.3">
-    <tspan font-weight="700" fill="#f8fafc">Life</tspan><tspan font-weight="300" fill="#94a3b8">Flow</tspan>
+    <tspan font-weight="700" fill="#f8fafc">Life</tspan><tspan font-weight="300" fill="#94a3b8">Hub</tspan>
   </text>
 
   <!-- Séparateur -->
@@ -271,5 +271,5 @@
   <rect x="240" y="758" width="1040" height="1" fill="#1e293b"/>
   <circle cx="268" cy="779" r="4" fill="#10B981"/>
   <text x="280" y="783" font-size="11" fill="#475569">4 connecteurs actifs</text>
-  <text x="860" y="783" font-size="11" fill="#2d3f57">LifeFlow v1.0 · Sync il y a 2 min</text>
+  <text x="860" y="783" font-size="11" fill="#2d3f57">LifeHub v1.0 · Sync il y a 2 min</text>
 </svg>

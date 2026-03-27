@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Politique de confidentialité — LifeHub" description="Politique de confidentialité de LifeHub. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles.">
+  <!-- Navbar simple -->
+  <nav class="fixed top-0 left-0 right-0 z-50 navbar-glass">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/logo-with-text-dark.svg" alt="LifeHub" class="h-8" />
+        </a>
+        <a href="/" class="text-sm text-slate-400 hover:text-slate-50 transition-colors">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-24">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-slate-50 mb-2">Politique de confidentialité</h1>
+      <p class="text-sm text-slate-500 mb-12">Dernière mise à jour : 27 mars 2026</p>
+
+      <div class="space-y-10 text-slate-300 leading-relaxed">
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">1. Responsable du traitement</h2>
+          <p>
+            LifeHub est un projet personnel développé par Jérémy Dugué.<br />
+            Pour toute question relative à vos données personnelles, vous pouvez nous contacter à l'adresse :
+            <a href="mailto:contact@lifehub.dev" class="text-brand-violet hover:underline">contact@lifehub.dev</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">2. Données collectées</h2>
+          <p class="mb-3">Nous collectons les données suivantes :</p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+            <li><strong class="text-slate-300">Liste d'attente :</strong> adresse email (via le formulaire d'inscription sur le site)</li>
+            <li><strong class="text-slate-300">Données de connexion :</strong> lors de l'utilisation de l'application, les données issues des services connectés (email, calendrier, santé, etc.) sont traitées pour fournir les fonctionnalités de l'application</li>
+            <li><strong class="text-slate-300">Données techniques :</strong> logs de connexion, adresse IP, type de navigateur (à des fins de sécurité et de diagnostic)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">3. Finalité du traitement</h2>
+          <p class="mb-3">Vos données sont utilisées pour :</p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+            <li>Vous notifier de la disponibilité de LifeHub (liste d'attente)</li>
+            <li>Fournir les fonctionnalités de l'application (synchronisation, analyses IA, tableau de bord)</li>
+            <li>Améliorer l'expérience utilisateur et corriger les bugs</li>
+            <li>Assurer la sécurité de la plateforme</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">4. Base légale</h2>
+          <p>
+            Le traitement de vos données repose sur votre <strong class="text-slate-50">consentement</strong> (inscription volontaire à la liste d'attente)
+            et sur l'<strong class="text-slate-50">exécution du contrat</strong> (utilisation de l'application).
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">5. Hébergement et sous-traitants</h2>
+          <p class="mb-3">Vos données sont hébergées par :</p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+            <li><strong class="text-slate-300">Supabase</strong> (base de données) — serveurs en Union Européenne</li>
+            <li><strong class="text-slate-300">Vercel</strong> (hébergement du site) — réseau mondial avec nœuds en Europe</li>
+          </ul>
+          <p class="mt-3">Aucune donnée n'est vendue ni partagée avec des tiers à des fins commerciales.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">6. Durée de conservation</h2>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+            <li><strong class="text-slate-300">Liste d'attente :</strong> jusqu'au lancement de l'application ou jusqu'à votre demande de suppression</li>
+            <li><strong class="text-slate-300">Données de l'application :</strong> tant que votre compte est actif</li>
+            <li><strong class="text-slate-300">Données techniques :</strong> 12 mois maximum</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">7. Vos droits</h2>
+          <p class="mb-3">Conformément au RGPD, vous disposez des droits suivants :</p>
+          <ul class="list-disc list-inside space-y-1.5 text-slate-400">
+            <li><strong class="text-slate-300">Droit d'accès :</strong> obtenir une copie de vos données personnelles</li>
+            <li><strong class="text-slate-300">Droit de rectification :</strong> corriger vos données inexactes</li>
+            <li><strong class="text-slate-300">Droit à l'effacement :</strong> demander la suppression de vos données</li>
+            <li><strong class="text-slate-300">Droit à la portabilité :</strong> recevoir vos données dans un format structuré</li>
+            <li><strong class="text-slate-300">Droit d'opposition :</strong> vous opposer au traitement de vos données</li>
+          </ul>
+          <p class="mt-3">
+            Pour exercer ces droits, contactez-nous à
+            <a href="mailto:contact@lifehub.dev" class="text-brand-violet hover:underline">contact@lifehub.dev</a>
+            ou utilisez notre <a href="/suppression-donnees" class="text-brand-violet hover:underline">page de demande de suppression</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">8. Cookies</h2>
+          <p>
+            Le site LifeHub n'utilise pas de cookies publicitaires ni de trackers tiers.
+            Seuls des cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">9. Modifications</h2>
+          <p>
+            Cette politique peut être mise à jour. En cas de modification significative, nous vous en informerons par email
+            ou via une notification sur l'application.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</Layout>
