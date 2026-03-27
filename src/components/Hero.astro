@@ -4,58 +4,83 @@
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
   <!-- Background orbs -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-brand-fuchsia/10 blur-[120px] animate-orb"></div>
-    <div class="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-brand-indigo/10 blur-[120px] animate-orb-slow"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-violet/5 blur-[160px]"></div>
+    <div class="absolute left-1/2 top-[-10%] w-[700px] h-[700px] -translate-x-1/2 rounded-full bg-brand-violet/[0.08] blur-[160px]"></div>
+    <div class="absolute -bottom-40 -left-20 w-[400px] h-[400px] rounded-full bg-brand-fuchsia/[0.07] blur-[120px]"></div>
+    <div class="absolute -bottom-40 -right-20 w-[400px] h-[400px] rounded-full bg-brand-indigo/[0.07] blur-[120px]"></div>
   </div>
 
   <!-- Dot grid -->
-  <div class="absolute inset-0 dot-grid opacity-50"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(248, 250, 252, 0.055) 1px, transparent 1px); background-size: 40px 40px;"></div>
 
-  <!-- Animated wave SVG -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-20 pointer-events-none">
-    <svg viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scrolling heartbeat wave — full width, like the app -->
+  <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 overflow-hidden pointer-events-none">
+    <svg
+      viewBox="0 0 2880 220"
+      aria-hidden="true"
+      class="animate-wave-scroll"
+      style="width: 200vw; height: auto; opacity: 0.08;"
+    >
       <defs>
-        <linearGradient id="hero-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="hero-pulse" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#EC4899" />
           <stop offset="50%" stop-color="#A855F7" />
           <stop offset="100%" stop-color="#6366F1" />
         </linearGradient>
       </defs>
       <path
-        d="M 0 100 C 50 100, 75 40, 125 40 C 175 40, 200 160, 250 160 C 300 160, 325 30, 400 30 C 475 30, 500 170, 550 170 C 600 170, 625 50, 675 50 C 725 50, 750 100, 800 100"
-        stroke="url(#hero-wave-grad)"
-        stroke-width="3"
+        d="M 0 110 C 133 110, 227 30, 360 30 C 493 30, 587 110, 720 110 C 853 110, 947 190, 1080 190 C 1213 190, 1307 110, 1440 110 C 1573 110, 1667 30, 1800 30 C 1933 30, 2027 110, 2160 110 C 2293 110, 2387 190, 2520 190 C 2653 190, 2747 110, 2880 110"
+        fill="none"
+        stroke="url(#hero-pulse)"
+        stroke-width="20"
         stroke-linecap="round"
-        class="animate-wave"
       />
     </svg>
   </div>
 
   <!-- Content -->
   <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-    <!-- Badge -->
-    <div class="animate-float-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-700 bg-surface-800/60 backdrop-blur-sm mb-8">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-      <span class="text-xs font-medium text-slate-300">Bientôt disponible — Accès anticipé 2026</span>
+    <!-- Logo — stacked like the app -->
+    <div class="animate-float-up flex flex-col items-center gap-3 mb-10">
+      <!-- Pulse mark icon -->
+      <svg viewBox="0 0 200 200" class="w-16 h-16 logo-animated" aria-hidden="true">
+        <defs>
+          <linearGradient id="hero-logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#F472B6" />
+            <stop offset="50%" stop-color="#C084FC" />
+            <stop offset="100%" stop-color="#818CF8" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M 28 100 C 38 100, 42 82, 52 82 C 62 82, 66 118, 76 118 C 86 118, 88 68, 100 68 C 112 68, 114 132, 126 132 C 138 132, 140 50, 154 50 C 164 50, 166 150, 172 150"
+          fill="none"
+          stroke="url(#hero-logo-grad)"
+          stroke-width="11"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <!-- Wordmark -->
+      <div class="text-3xl" style="letter-spacing: -1px;">
+        <span class="font-bold text-slate-50">Life</span><span class="font-light text-slate-400">Hub</span>
+      </div>
     </div>
 
     <!-- Headline -->
-    <h1 class="animate-float-up delay-100 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-      <span class="text-slate-50">Votre vie.</span><br />
-      <span class="text-gradient">Unifiée. Intelligente.</span>
+    <h1 class="animate-float-up delay-100 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6" style="letter-spacing: -0.04em;">
+      <span class="text-slate-50">L'intelligence qui relie</span><br />
+      <span class="text-gradient">toutes vos dimensions</span>
     </h1>
 
     <!-- Subtitle -->
-    <p class="animate-float-up delay-200 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-      La couche d'intelligence qui relie toutes les dimensions de votre quotidien.
-      Mails, calendrier, santé, finances et IA — centralisés en un seul endroit.
+    <p class="animate-float-up delay-200 text-lg sm:text-xl text-slate-500 max-w-md mx-auto mb-10 leading-relaxed">
+      Productivité, santé, finances — centralisez vos données,
+      laissez l'IA orchestrer votre quotidien.
     </p>
 
     <!-- CTA buttons -->
     <div class="animate-float-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#waitlist" class="btn-primary text-base px-8 py-3.5">
-        Rejoindre l'accès anticipé
+      <a href="#waitlist" class="btn-primary text-base px-8 py-3.5 animate-heartbeat-cta">
+        Commencer
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>

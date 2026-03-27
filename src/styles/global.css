@@ -190,6 +190,33 @@ body {
   color: #f8fafc;
 }
 
+/* Scrolling heartbeat wave — from the app */
+@keyframes wave-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-wave-scroll {
+  animation: wave-scroll 4s linear infinite;
+}
+
+/* Heartbeat CTA button — lub-dub pulse */
+@keyframes heartbeat-cta {
+  0%, 100% { transform: scale(1);    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25); }
+  15%      { transform: scale(1.04); box-shadow: 0 4px 30px rgba(168, 85, 247, 0.5); }
+  30%      { transform: scale(1);    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3); }
+  45%      { transform: scale(1.02); box-shadow: 0 4px 25px rgba(168, 85, 247, 0.45); }
+  65%      { transform: scale(1);    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.35); }
+}
+.animate-heartbeat-cta {
+  animation: heartbeat-cta 2.4s ease-in-out infinite;
+}
+
+/* Logo animated gradient */
+.logo-animated {
+  background-size: 200% 200%;
+  animation: pulse-shift 3s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
