@@ -1,0 +1,41 @@
+---
+import WaitlistForm from './WaitlistForm.tsx'
+---
+
+<section id="waitlist" class="relative py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="reveal relative overflow-hidden rounded-3xl">
+      <!-- Background gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-violet-700 via-purple-600 to-pink-600"></div>
+      <!-- Decorative wave -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1200 200" fill="none" preserveAspectRatio="none">
+          <path
+            d="M 0 100 C 100 100, 150 40, 250 40 C 350 40, 400 160, 500 160 C 600 160, 650 30, 800 30 C 950 30, 1000 170, 1100 170 C 1150 170, 1175 100, 1200 100"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+      <!-- Dot pattern -->
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+      <div class="relative px-8 py-16 sm:px-16 sm:py-24 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+          Prêt à unifier votre vie ?
+        </h2>
+        <p class="text-lg text-white/80 max-w-xl mx-auto mb-10">
+          Rejoignez l'accès anticipé et soyez parmi les premiers à découvrir LifeFlow. Gratuit pendant la bêta.
+        </p>
+
+        <!-- Formulaire React connecté à Supabase -->
+        <WaitlistForm client:load />
+
+        <p class="text-xs text-white/50 mt-4">
+          Aucun spam. Vous serez notifié uniquement au lancement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

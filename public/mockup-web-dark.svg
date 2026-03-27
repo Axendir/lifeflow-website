@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <linearGradient id="pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="briefing-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="60%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+    <linearGradient id="nav-active" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="health-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="finance-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <!-- Clip pour l'onde de la card briefing : zone droite uniquement -->
+    <clipPath id="clip-briefing-wave">
+      <rect x="720" y="150" width="320" height="196"/>
+    </clipPath>
+    <filter id="shadow-card">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="shadow-briefing">
+      <feDropShadow dx="0" dy="6" stdDeviation="24" flood-color="#7C3AED" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- ══ FOND PRINCIPAL ══ -->
+  <rect width="1280" height="800" fill="#0f172a"/>
+
+  <!-- ══ SIDEBAR ══ -->
+  <rect x="0" y="0" width="240" height="800" fill="#1e293b"/>
+  <rect x="239" y="0" width="1" height="800" fill="#2d3f57"/>
+
+  <!-- ── Logo empilé : onde AU-DESSUS de LifeFlow ── -->
+  <!-- Onde Pulse centrée dans sidebar (240px → centre x=120) -->
+  <g transform="translate(70, 18) scale(0.5)">
+    <path d="M 28 100 C 38 100, 42 82, 52 82 C 62 82, 66 118, 76 118
+             C 86 118, 88 68, 100 68 C 112 68, 114 132, 126 132
+             C 138 132, 140 50, 154 50 C 164 50, 166 150, 172 150"
+          fill="none" stroke="url(#pulse)" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <!-- "LifeFlow" centré sous l'onde -->
+  <text text-anchor="middle" x="120" y="94" font-size="15" letter-spacing="-0.3">
+    <tspan font-weight="700" fill="#f8fafc">Life</tspan><tspan font-weight="300" fill="#94a3b8">Flow</tspan>
+  </text>
+
+  <!-- Séparateur -->
+  <line x1="20" y1="108" x2="220" y2="108" stroke="#2d3f57" stroke-width="1"/>
+
+  <!-- Label nav -->
+  <text x="20" y="128" font-size="9.5" font-weight="600" letter-spacing="1.3" fill="#475569">NAVIGATION</text>
+
+  <!-- ── Nav items ── -->
+  <!-- Dashboard (actif) -->
+  <rect x="10" y="136" width="220" height="40" rx="10" fill="url(#nav-active)"/>
+  <rect x="10" y="136" width="3" height="40" rx="1.5" fill="url(#pulse)"/>
+  <path d="M 34 164 L 34 157 L 44 149 L 54 157 L 54 164 Z" fill="none" stroke="#A855F7" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="38" y="158" width="6" height="6" rx="1" fill="#A855F7"/>
+  <text x="66" y="161" font-size="13" font-weight="600" fill="#A855F7">Dashboard</text>
+
+  <!-- Productivité -->
+  <rect x="36" y="189" width="16" height="16" rx="3" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <line x1="39" y1="195" x2="49" y2="195" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="39" y1="199" x2="47" y2="199" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="62" y="202" font-size="13" fill="#64748b">Productivité</text>
+
+  <!-- Santé -->
+  <path d="M 44 227 C 44 222, 37 218, 37 223 C 37 228, 44 233, 44 233 C 44 233, 51 228, 51 223 C 51 218, 44 222, 44 227Z"
+        fill="none" stroke="#475569" stroke-width="1.5"/>
+  <text x="62" y="232" font-size="13" fill="#64748b">Santé</text>
+
+  <!-- Finances -->
+  <circle cx="44" cy="263" r="8" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <text x="41" y="267" font-size="9" font-weight="600" fill="#475569">€</text>
+  <text x="62" y="268" font-size="13" fill="#64748b">Finances</text>
+
+  <!-- Sep -->
+  <line x1="20" y1="290" x2="220" y2="290" stroke="#2d3f57" stroke-width="1"/>
+  <text x="20" y="310" font-size="9.5" font-weight="600" letter-spacing="1.3" fill="#475569">CONNECTEURS</text>
+
+  <!-- Connecteurs -->
+  <circle cx="34" cy="330" r="4" fill="#10B981"/>
+  <text x="46" y="334" font-size="12" fill="#64748b">Google Calendar</text>
+  <circle cx="34" cy="352" r="4" fill="#10B981"/>
+  <text x="46" y="356" font-size="12" fill="#64748b">Notion</text>
+  <circle cx="34" cy="374" r="4" fill="#F59E0B"/>
+  <text x="46" y="378" font-size="12" fill="#64748b">Withings</text>
+  <circle cx="34" cy="396" r="4" fill="#475569"/>
+  <text x="46" y="400" font-size="12" fill="#64748b">Boursobank</text>
+
+  <!-- User -->
+  <rect x="10" y="742" width="220" height="46" rx="10" fill="#0f172a" opacity="0.6"/>
+  <circle cx="38" cy="765" r="14" fill="url(#pulse)"/>
+  <text text-anchor="middle" x="38" y="769" font-size="11" font-weight="700" fill="white">JD</text>
+  <text x="58" y="761" font-size="12" font-weight="600" fill="#f8fafc">Jérémy Dugué</text>
+  <text x="58" y="777" font-size="11" fill="#64748b">Plan Pro</text>
+
+  <!-- ══ TOPBAR ══ -->
+  <rect x="240" y="0" width="1040" height="60" fill="#0f172a"/>
+  <rect x="240" y="59" width="1040" height="1" fill="#1e293b"/>
+
+  <!-- Search -->
+  <rect x="264" y="14" width="300" height="34" rx="9" fill="#1e293b" stroke="#2d3f57" stroke-width="1"/>
+  <circle cx="287" cy="31" r="7" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <line x1="292" y1="36" x2="298" y2="42" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="308" y="36" font-size="13" fill="#475569">Rechercher...</text>
+
+  <!-- Date -->
+  <text x="900" y="35" font-size="12" fill="#64748b">Vendredi 13 mars 2026</text>
+
+  <!-- Bell -->
+  <rect x="1154" y="14" width="34" height="34" rx="9" fill="#1e293b"/>
+  <path d="M 1171 21 C 1171 19, 1169 18, 1167 18 C 1165 18, 1163 19, 1163 21 L 1163 28 L 1160 31 L 1174 31 L 1171 28Z"
+        fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="1167" cy="33" r="1.5" fill="#94a3b8"/>
+  <circle cx="1176" cy="17" r="5" fill="#EC4899"/>
+  <text text-anchor="middle" x="1176" y="20" font-size="7" font-weight="700" fill="white">3</text>
+
+  <!-- Avatar -->
+  <circle cx="1228" cy="30" r="16" fill="url(#pulse)"/>
+  <text text-anchor="middle" x="1228" y="35" font-size="12" font-weight="700" fill="white">JD</text>
+
+  <!-- ══ CONTENU PRINCIPAL ══ -->
+  <text x="264" y="102" font-size="25" font-weight="700" letter-spacing="-0.5" fill="#f8fafc">Bonjour, Jérémy 👋</text>
+  <text x="264" y="124" font-size="13.5" fill="#64748b">Voici votre résumé du vendredi 13 mars 2026</text>
+
+  <!-- ══ MORNING BRIEFING CARD ══ -->
+  <rect x="264" y="142" width="748" height="182" rx="20" fill="url(#briefing-bg)" filter="url(#shadow-briefing)"/>
+
+  <!-- Onde décorative clippée à droite — très subtile, ne touche pas au texte -->
+  <g clip-path="url(#clip-briefing-wave)">
+    <g transform="translate(560, 50) scale(1.1)">
+      <path d="M 28 100 C 38 100, 42 82, 52 82 C 62 82, 66 118, 76 118
+               C 86 118, 88 68, 100 68 C 112 68, 114 132, 126 132
+               C 138 132, 140 50, 154 50 C 164 50, 166 150, 172 150"
+            fill="none" stroke="white" stroke-width="20" stroke-linecap="round" opacity="0.07"/>
+    </g>
+    <g transform="translate(590, 80) scale(0.95)">
+      <path d="M 28 100 C 38 100, 42 82, 52 82 C 62 82, 66 118, 76 118
+               C 86 118, 88 68, 100 68 C 112 68, 114 132, 126 132
+               C 138 132, 140 50, 154 50 C 164 50, 166 150, 172 150"
+            fill="none" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.1"/>
+    </g>
+  </g>
+
+  <!-- Contenu briefing — zone gauche dégagée -->
+  <text x="296" y="183" font-size="10.5" font-weight="600" letter-spacing="1.8" fill="white" opacity="0.65">MORNING BRIEFING IA</text>
+  <text x="296" y="216" font-size="22" font-weight="700" letter-spacing="-0.5" fill="white">3 tâches prioritaires · Score 87/100</text>
+  <text x="296" y="242" font-size="13.5" fill="white" opacity="0.82">Bonne journée en perspective. Votre réunion Teams commence dans 2h.</text>
+
+  <!-- Stat pills -->
+  <rect x="296" y="258" width="112" height="28" rx="14" fill="white" opacity="0.14"/>
+  <text x="315" y="277" font-size="12" font-weight="500" fill="white">🗓  2 événements</text>
+  <rect x="418" y="258" width="96" height="28" rx="14" fill="white" opacity="0.14"/>
+  <text x="436" y="277" font-size="12" font-weight="500" fill="white">✅  5 tâches</text>
+  <rect x="524" y="258" width="102" height="28" rx="14" fill="white" opacity="0.14"/>
+  <text x="542" y="277" font-size="12" font-weight="500" fill="white">💊  Rappel 8h</text>
+
+  <!-- Bouton voir -->
+  <rect x="920" y="258" width="72" height="28" rx="14" fill="white" opacity="0.18"/>
+  <text x="937" y="277" font-size="12" font-weight="600" fill="white">Voir →</text>
+
+  <!-- ══ 3 MODULE CARDS ══ -->
+
+  <!-- ── Productivité ── -->
+  <rect x="264" y="348" width="236" height="200" rx="16" fill="#1e293b" filter="url(#shadow-card)"/>
+  <rect x="264" y="348" width="236" height="200" rx="16" fill="none" stroke="#2d3f57" stroke-width="1"/>
+  <rect x="284" y="368" width="34" height="34" rx="10" fill="#6366F1" opacity="0.18"/>
+  <rect x="293" y="377" width="16" height="13" rx="2" fill="none" stroke="#818CF8" stroke-width="1.5"/>
+  <line x1="296" y1="382" x2="306" y2="382" stroke="#818CF8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="296" y1="386" x2="304" y2="386" stroke="#818CF8" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="328" y="391" font-size="12.5" font-weight="600" fill="#94a3b8">Productivité</text>
+  <text x="284" y="428" font-size="34" font-weight="700" letter-spacing="-1" fill="#f8fafc">78%</text>
+  <text x="284" y="448" font-size="12" fill="#64748b">Tâches complétées</text>
+  <rect x="284" y="460" width="196" height="5" rx="2.5" fill="#334155"/>
+  <rect x="284" y="460" width="153" height="5" rx="2.5" fill="url(#pulse)"/>
+  <text x="284" y="480" font-size="11.5" fill="#475569">5 / 8 tâches · 2 en retard</text>
+  <rect x="284" y="498" width="90" height="28" rx="9" fill="#6366F1" opacity="0.14"/>
+  <text x="307" y="517" font-size="12" font-weight="600" fill="#818CF8">Voir tout →</text>
+
+  <!-- ── Santé ── -->
+  <rect x="516" y="348" width="236" height="200" rx="16" fill="#1e293b" filter="url(#shadow-card)"/>
+  <rect x="516" y="348" width="236" height="200" rx="16" fill="none" stroke="#2d3f57" stroke-width="1"/>
+  <rect x="536" y="368" width="34" height="34" rx="10" fill="#10B981" opacity="0.18"/>
+  <path d="M 553 385 C 553 380, 546 376, 546 381 C 546 386, 553 391, 553 391 C 553 391, 560 386, 560 381 C 560 376, 553 380, 553 385Z"
+        fill="none" stroke="#34D399" stroke-width="1.5"/>
+  <text x="580" y="391" font-size="12.5" font-weight="600" fill="#94a3b8">Santé</text>
+  <text x="536" y="428" font-size="34" font-weight="700" letter-spacing="-1" fill="#f8fafc">7h22</text>
+  <text x="536" y="448" font-size="12" fill="#64748b">Sommeil · +14 min</text>
+  <rect x="536" y="460" width="196" height="5" rx="2.5" fill="#334155"/>
+  <rect x="536" y="460" width="172" height="5" rx="2.5" fill="url(#health-bar)"/>
+  <text x="536" y="480" font-size="11.5" fill="#475569">Poids: 72.4 kg · FC: 62 bpm</text>
+  <rect x="536" y="498" width="90" height="28" rx="9" fill="#10B981" opacity="0.14"/>
+  <text x="557" y="517" font-size="12" font-weight="600" fill="#34D399">Voir tout →</text>
+
+  <!-- ── Finances ── -->
+  <rect x="768" y="348" width="244" height="200" rx="16" fill="#1e293b" filter="url(#shadow-card)"/>
+  <rect x="768" y="348" width="244" height="200" rx="16" fill="none" stroke="#2d3f57" stroke-width="1"/>
+  <rect x="788" y="368" width="34" height="34" rx="10" fill="#F59E0B" opacity="0.18"/>
+  <circle cx="805" cy="385" r="7.5" fill="none" stroke="#FCD34D" stroke-width="1.5"/>
+  <text text-anchor="middle" x="805" y="389" font-size="8.5" font-weight="700" fill="#FCD34D">€</text>
+  <text x="832" y="391" font-size="12.5" font-weight="600" fill="#94a3b8">Finances</text>
+  <text x="788" y="428" font-size="30" font-weight="700" letter-spacing="-1" fill="#f8fafc">2 840 €</text>
+  <text x="788" y="448" font-size="12" fill="#64748b">Solde disponible</text>
+  <rect x="788" y="460" width="204" height="5" rx="2.5" fill="#334155"/>
+  <rect x="788" y="460" width="122" height="5" rx="2.5" fill="url(#finance-bar)"/>
+  <text x="788" y="480" font-size="11.5" fill="#475569">Budget 60% · 3 alertes</text>
+  <rect x="788" y="498" width="90" height="28" rx="9" fill="#F59E0B" opacity="0.14"/>
+  <text x="808" y="517" font-size="12" font-weight="600" fill="#FCD34D">Voir tout →</text>
+
+  <!-- ══ PANNEAU DROIT — Agenda ══ -->
+  <rect x="1030" y="142" width="222" height="208" rx="16" fill="#1e293b" filter="url(#shadow-card)"/>
+  <rect x="1030" y="142" width="222" height="208" rx="16" fill="none" stroke="#2d3f57" stroke-width="1"/>
+  <text x="1050" y="170" font-size="13" font-weight="600" fill="#f8fafc">Agenda du jour</text>
+  <line x1="1050" y1="180" x2="1232" y2="180" stroke="#2d3f57" stroke-width="1"/>
+
+  <!-- Timeline -->
+  <circle cx="1060" cy="204" r="5" fill="#6366F1"/>
+  <line x1="1060" y1="209" x2="1060" y2="238" stroke="#2d3f57" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="1074" y="200" font-size="12" font-weight="600" fill="#f8fafc">09:00 — Stand-up</text>
+  <text x="1074" y="215" font-size="11" fill="#64748b">Teams · 30 min</text>
+
+  <circle cx="1060" cy="248" r="5" fill="#A855F7"/>
+  <line x1="1060" y1="253" x2="1060" y2="282" stroke="#2d3f57" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="1074" y="244" font-size="12" font-weight="600" fill="#f8fafc">11:30 — Médecin</text>
+  <text x="1074" y="259" font-size="11" fill="#64748b">Rappel traitement</text>
+
+  <circle cx="1060" cy="292" r="5" fill="#EC4899"/>
+  <line x1="1060" y1="297" x2="1060" y2="326" stroke="#2d3f57" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="1074" y="288" font-size="12" font-weight="600" fill="#f8fafc">14:00 — Budget Q2</text>
+  <text x="1074" y="303" font-size="11" fill="#64748b">Notion · Review</text>
+
+  <circle cx="1060" cy="336" r="5" fill="#334155"/>
+  <text x="1074" y="332" font-size="12" fill="#64748b">18:00 — Sport</text>
+
+  <!-- Tâches rapides -->
+  <rect x="1030" y="366" width="222" height="182" rx="16" fill="#1e293b" filter="url(#shadow-card)"/>
+  <rect x="1030" y="366" width="222" height="182" rx="16" fill="none" stroke="#2d3f57" stroke-width="1"/>
+  <text x="1050" y="392" font-size="13" font-weight="600" fill="#f8fafc">Tâches rapides</text>
+  <line x1="1050" y1="402" x2="1232" y2="402" stroke="#2d3f57" stroke-width="1"/>
+
+  <!-- Task items -->
+  <rect x="1048" y="412" width="18" height="18" rx="5" fill="#6366F1"/>
+  <polyline points="1052,421 1056,426 1064,416" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1074" y="426" font-size="12" fill="#64748b" text-decoration="line-through">Prendre magnésium</text>
+
+  <rect x="1048" y="438" width="18" height="18" rx="5" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="1074" y="452" font-size="12" fill="#f8fafc">Review budget Q2</text>
+
+  <rect x="1048" y="464" width="18" height="18" rx="5" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="1074" y="478" font-size="12" fill="#f8fafc">Répondre à Thomas</text>
+  <rect x="1184" y="462" width="46" height="18" rx="5" fill="#EC4899" opacity="0.2"/>
+  <text x="1190" y="475" font-size="10" font-weight="600" fill="#F9A8D4">Urgent</text>
+
+  <!-- CTA -->
+  <rect x="1048" y="498" width="186" height="38" rx="12" fill="url(#pulse)"/>
+  <text text-anchor="middle" x="1141" y="522" font-size="13" font-weight="600" fill="white">+ Nouvelle tâche</text>
+
+  <!-- ══ STATUS BAR ══ -->
+  <rect x="240" y="758" width="1040" height="42" fill="#0f172a"/>
+  <rect x="240" y="758" width="1040" height="1" fill="#1e293b"/>
+  <circle cx="268" cy="779" r="4" fill="#10B981"/>
+  <text x="280" y="783" font-size="11" fill="#475569">4 connecteurs actifs</text>
+  <text x="860" y="783" font-size="11" fill="#2d3f57">LifeFlow v1.0 · Sync il y a 2 min</text>
+</svg>
